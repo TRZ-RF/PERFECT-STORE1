@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERFECT STORE</title>
+    <link rel="icon" type="image/png" href="Perfect store.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
             --text-dim: #a0a0a8;
             --success: #00f5d4;
             --error: #ff4d4d;
-            --main-bg: url('Gemini_Generated_Image_x0lb9hx0lb9hx0lb.png');
+            --main-bg: url('Perfect store.png');
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
@@ -52,9 +53,30 @@
 
         .logo img { height: 55px; filter: drop-shadow(0 0 10px var(--primary)); }
         
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 700; transition: 0.3s; font-size: 1rem; }
-        .nav-links a:hover { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+        .nav-links {
+    display: flex;
+    gap: 20px; /* المسافة بين الروابط */
+    list-style: none;
+    direction: rtl; /* لترتيب الكلمات من اليمين لليسار */
+}
+
+
+        .nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+
+        .nav-links a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+
 
         .cart-trigger { 
             position: relative; cursor: pointer; font-size: 1.8rem; background: rgba(255,255,255,0.05); 
@@ -203,10 +225,9 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-section h1 { font-size: 3rem; }
-            .cart-panel { width: 100%; }
-            .nav-links { display: none; }
-            .container { width: 92%; }
+    .nav-links {
+        display: none;} /* يفضل إخفاؤها في الجوال أو تحويلها لقائمة جانبية */
+
         }
 
         .faq-container {
@@ -255,13 +276,304 @@
             transform: rotate(45deg);
             color: var(--error);
         }
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-            padding-top: 10px;
-        }
+        /* التعديل الذهبي لظهور كل الأسطر */
+.faq-item.active .faq-answer {
+    max-height: 2000px !important; /* زدنا المساحة جداً */
+    transition: max-height 0.8s ease-in-out; /* حركة أنعم للفتح */
+}
 
+/* تأكد من إضافة هذا التنسيق للأيقونة الخضراء كما طلبت */
+.faq-list li i {
+    color: #2ecc71 !important; /* أخضر ثابت */
+    font-size: 0.9rem;
+    min-width: 20px; /* يمنع انكماش الأيقونة */
+}
+
+.faq-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ccc; /* لون النص */
+    font-size: 1rem;
+}
+
+/* تلوين الرمز بالأخضر فقط */
+.faq-list li i {
+    color: #2ecc71 !important; /* لون أخضر زاهي */
+    font-size: 0.8rem;
+    background: none !important; /* إلغاء أي خلفية قديمة */
+    padding: 0 !important;
+}
         
-    </style>
+
+.main-footer {
+    background: rgba(10, 10, 12, 0.95);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(157, 78, 221, 0.2);
+    margin-top: 50px;
+}
+
+.footer-content p {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer-content span#currentYear {
+    color: #9d4edd; /* لون السنة بالبنفسجي */
+}
+
+.footer-links {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #a0a0a8;
+}
+
+.simple-footer {
+    background: rgba(10, 10, 12, 0.9);
+    padding: 20px 0;
+    border-top: 1px solid rgba(157, 78, 221, 0.2);
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#yearNow {
+    color: #9d4edd; /* لون التاريخ بنفسجي ليتميز */
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.discord-link {
+    color: #5865F2;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* سنترة المحتوى في وسط الصفحة */
+    align-items: center;
+    flex-direction: row-reverse; /* هذا الأمر سيجعل الأيقونة على اليسار والنص على اليمين */
+    gap: 15px;
+    padding: 20px;
+}
+
+.discord-logo {
+    color: #9d4edd; /* لون ديسكورد */
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.discord-logo:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.footer-container p {
+    color: #ffffff;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.store-rules {
+    padding: 50px 20px;
+    background: #0a0a0c;
+    direction: rtl;
+}
+
+.rules-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.rules-title {
+    text-align: center;
+    color: #9d4edd;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(157, 78, 221, 0.3);
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* ترتيب القوانين تحت بعض */
+    gap: 20px;
+}
+
+.rule-item {
+    margin-bottom: 0;
+    background: rgba(157, 78, 221, 0.05);
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.rule-item:hover {
+    background: rgba(157, 78, 221, 0.1);
+    transform: translateX(-10px);
+    border-color: #9d4edd;
+}
+
+.rule-number {
+    background: #9d4edd;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.rule-item p {
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.support-section {
+    padding: 60px 20px;
+    text-align: center;
+    direction: rtl;
+}
+
+.support-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.support-card {
+    background: linear-gradient(145deg, #121215, #1a1a1e);
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    border-color: #9d4edd;
+}
+
+.support-icon {
+    font-size: 3rem;
+    color: #9d4edd;
+    margin-bottom: 20px;
+}
+
+.support-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.support-text {
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+.support-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #9d4edd;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(157, 78, 221, 0.4);
+}
+
+.support-button:hover {
+    background: #7b2cbf;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.support-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.support-wrapper {
+    text-align: center;
+    background: #121215; /* لون الخلفية الداكنة */
+    padding: 30px;
+    direction: ltr; /* لترتيب الرقم والأيقونة */
+}
+
+.custom-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #9d4edd; /* نفس درجة اللون البنفسجي */
+    color: white;
+    padding: 15px 50px;
+    border-radius: 50px; /* جعل الحواف دائرية تماماً مثل الصورة */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.4); /* توهج خفيف */
+    transition: 0.3s;
+}
+
+.custom-whatsapp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(157, 78, 221, 0.6);
+}
+
+.custom-whatsapp-btn i {
+    transform: rotate(235deg); /* تدوير أيقونة الهاتف لتشبه الصورة */
+    font-size: 22px;
+}
+
+.support-footer-text {
+    color: #666;
+    margin-top: 20px;
+    font-size: 18px;
+    direction: rtl; /* النص السفلي باللغة العربية */
+}
+
+/* تلوين رمز العملة (الريال) باللون البنفسجي */
+.currency-img {
+    filter: invert(37%) sepia(93%) saturate(3522%) hue-rotate(251deg) brightness(94%) contrast(100%);
+    /* الفلتر أعلاه يحول اللون الأسود إلى اللون البنفسجي الخاص بمتجرك */
+    height: 30px; /* تحكم في الطول من هنا */
+    width: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* إذا كان رمز الريال نصاً وليس صورة، استخدم هذا الكود */
+.p-price span, .currency-text {
+    color: var(--primary) !important;
+    font-weight: bold;
+}
+
+
+</style>
 </head>
 <body>
 
@@ -283,12 +595,14 @@
 
     <header>
         <div class="logo">
-            <img src="Gemini_Generated_Image_x0lb9hx0lb9hx0lb.png" alt="Logo">
+            <img src="Perfect store.png" alt="Logo">
         </div>
         <ul class="nav-links">
             <li><a href="#home">الرئيسية</a></li>
             <li><a href="#store">المتجر</a></li>
             <li><a href="#faq">الأسئلة الشائعة</a></li>
+            <li><a href="#store-rules">القوانين</a></li>
+            <li><a href="#support-wrapper">الدعم الفني</a></li>
         </ul>
         <div class="cart-trigger" onclick="toggleCart()">
             <i class="fas fa-shopping-bag"></i>
@@ -343,6 +657,7 @@
     </div>
 </div>
 
+
 <section class="container" id="faq">
     <div class="section-title">
         <h2>الأسئلة <span>الشائعة</span></h2>
@@ -378,17 +693,89 @@
                 <p>بعد إتمام الطلب، سيظهر لك رقم مرجعي. يمكنك التواصل معنا عبر الديسكورد وتزويدنا بالرقم لمتابعة حالة طلبك.</p>
             </div>
         </div>
-    </div>
+    
     
 
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>ما هي طرق الدفع المتاحة؟</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+                <ul class="faq-list">
+             <p>طرق الدفع المتاحة هي</p>
+    <li><i class="fas fa-circle"></i>التحويل من عبر  /  NEO</li>
+    <li><i class="fas fa-circle"></i>التحويل من عبر  /  Urpay</li>
+    <li><i class="fas fa-circle"></i>التحويل من عبر  /  Al Ahly Bank</li>
+    <li><i class="fas fa-circle"></i>التحويل من عبر  /  Al Riyadh  Bank</li>
+    <li><i class="fas fa-circle"></i>التحويل من عبر  /  Al Rajhi Bank</li>
+    <li><i class="fas fa-circle"></i>التحويل من عبر  /  Barq</li>
+</ul>
+            </div>
+        </div>
+    </div>
     
+    
+</section>
+
+<section class="store-rules" id="store-rules">
+    <div class="rules-container">
+        <h2 class="rules-title"> <i class="fas fa-gavel"></i> قوانين متجر بيرفكت</h2>
+        
+        <div class="rules-grid">
+            <div class="rule-item">
+                <span class="rule-number">01</span>
+                <p>يمنع منعاً باتاً محاولة استغلال أي ثغرة في الموقع أو النظام، ومن يفعل ذلك يعرض نفسه للحظر الدائم.</p>
+            </div>
+            
+            <div class="rule-item">
+                <span class="rule-number">02</span>
+                <p>المتجر غير مسؤول عن أي سوء استخدام للمنتج أو الخدمة بعد عملية التسليم الرسمية.</p>
+            </div>
+            
+            <div class="rule-item">
+                <span class="rule-number">03</span>
+                <p>يجب على العميل التأكد من صحة البيانات المدخلة  (الاسم / رقم الجوال)  ؛ المتجر لا يتحمل مسؤولية الخطأ في البيانات.</p>
+            </div>
+
+            <div class="rule-item">
+                <span class="rule-number">04</span>
+                <p>المنتجات الرقمية لا ترد ولا تستبدل بعد التسليم إلا في حال وجود خلل فني من طرف المتجر.</p>
+            </div>
+            
+            <div class="rule-item">
+                <span class="rule-number">05</span>
+                <p>بمجرد إتمامك لعملية الشراء، فأنت توافق تلقائياً على كافة شروط وقوانين متجر بيرفكت.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="support-section" id="support-wrapper">
+    <div class="support-container">
+        <div class="support-card">
+            <div class="support-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <h2 class="support-title">الدعم الفني</h2>
+            <p class="support-text">هل لديك استفسار أو واجهت مشكلة؟ نحن هنا لخدمتك</p>
+            
+            <div class="support-wrapper">
+    <a href="https://wa.me/966566599251" target="_blank" class="custom-whatsapp-btn">
+        <span>+966 56 659 9251</span>
+        <i class="fas fa-phone"></i>
+            </a>
+            
+            <p class="support-note">متاحون للرد على استفساراتكم على مدار الساعة</p>
+        </div>
+    </div>
 </section>
 
     <script>
         // =========================================
         // 1. الإعدادات (Webhooks & Assets)
         // =========================================
-        const DISCORD_WEBHOOK = 'https://discordapp.com/api/webhooks/1454493757062779063/h6nBU_l_mfhl_bgwX05TFNEl3E39wNldHYv1hwqvSUHZ68IypMMhWbCVYifq-e15CETQ';
+        const DISCORD_WEBHOOK = 'https://discordapp.com/api/webhooks/1455288554266689707/3iNfvztPqAtvdZfQwalLoVpOJFC8_XU4hZgHKSCAJrtObBDmPj3d6_fR46q1LI--9zy8';
         const CURRENCY_IMG = 'Saudi_Riyal_Symbol-1.png'; 
 
         // =========================================
@@ -511,12 +898,13 @@ function removeItem(index) {
             btn.disabled = true;
             btn.style.opacity = "0.6";
 
-            const orderRef = "#PF-" + Math.floor(100000 + Math.random() * 900000);
+            const orderRef = "#PT-" + Math.floor(100000 + Math.random() * 900000);
             const totalSum = cart.reduce((a, b) => a + b.price, 0);
+            
 
             const payload = {
                 username: "Perfect Store Alerts",
-                avatar_url: "https://cdn-icons-png.flaticon.com/512/869/869636.png",
+                avatar_url: "https://i.ibb.co/Vp6Yf09/Perfect-store.jpg",
                 embeds: [{
                     title: "🚀 طلب جديد وصل للمتجر!",
                     color: 10309085,
@@ -599,6 +987,28 @@ function toggleFaq(element) {
         const parent = element.parentElement;
         parent.classList.toggle('active');
     }
+
+    // تحديث سنة الحقوق تلقائياً
+    document.addEventListener("DOMContentLoaded", function() {
+        const yearElement = document.getElementById('yearNow');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    });
 </script>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>جميع الحقوق محفوظة © <span id="YearNow">2025 </span>Perfect Store</p>
+        <div class="footer-links">
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <a href="https://discord.gg/XzWVkPpdKw" target="_blank" class="discord-logo">
+            <i class="fab fa-discord"></i>
+        </a>
+</footer>
+
 </body>
 </html>
