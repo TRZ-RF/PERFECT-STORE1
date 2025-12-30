@@ -283,6 +283,30 @@
     }
 }
 
+@media (max-width: 768px) {
+    /* تصحيح وضع السلة في الجوال */
+    .cart-sidebar {
+        width: 100% !important; /* تاخذ عرض الشاشة كامل عشان ما تطلع برا */
+        right: -100%; /* تكون مخفية تماماً جهة اليمين */
+        transition: 0.4s ease-in-out;
+    }
+
+    .cart-sidebar.active {
+        right: 0; /* لما تفتحها تغطي الشاشة بالكامل أو جزء منها */
+    }
+
+    /* تصغير محتويات السلة عشان تكفي الشاشة */
+    .cart-item {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .cart-item img {
+        width: 50px; /* تصغير صورة المنتج داخل السلة */
+        height: 50px;
+    }
+}
+
 /* للجوالات الصغيرة جداً */
 @media (max-width: 480px) {
     .products-grid {
